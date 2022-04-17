@@ -3,13 +3,15 @@
     Contains a function that implements lockboxes algorithm
 """
 
+
 def canUnlockAll(boxes):
     """Returns True if all boxes can be opened False otherwise"""
     opened = [0]
+    opened_new = 0
     box = boxes[0]
     while True:
         for j in range(len(box)):
-            if not box[j] in opened:
+            if not box[j] in opened and box[j] < len(boxes):
                 opened.append(box[j])
                 opened_new = 1
         if j == len(box) - 1:
