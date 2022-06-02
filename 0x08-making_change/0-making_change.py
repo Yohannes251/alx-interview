@@ -7,7 +7,7 @@
 
 def makeChange(coins, total):
     """Returns fewest number of coins or -1 if not fulfiled"""
-    if total == 0:
+    if total <= 0:
         return 0
     coins.sort()
     coins.reverse()
