@@ -11,7 +11,7 @@ def isWinner(x, nums):
     is_prime = 0
     is_not_Prime = 0
 
-    if nums and x > 0:
+    if nums and x > 0 and nums != []:
         for num in nums:
             if (num > 0):
                 if(num % 2 == 0):
